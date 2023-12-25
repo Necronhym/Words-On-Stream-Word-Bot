@@ -24,6 +24,6 @@ while(True):
     # Input string of letters
     input_string = input("Enter letters: ").lower()
 
-    # Filter and print words
-    filtered_words = sorted(filter_words(input_string), key=len, reverse=True)
+        # Filter and print words
+    filtered_words = sorted(filter_words(input_string), key=lambda x: (len(x), x.lower()), reverse=True)
     print(filtered_words)
